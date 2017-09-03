@@ -1,0 +1,17 @@
+# -*- coding:utf-8 -*-
+
+import jieba
+import codecs
+import sys
+reload(sys)
+sys.setdefaultencoding( "utf-8" )
+
+with open('newwords.txt','w') as file:
+    f = codecs.open('newWords.txt', 'r', 'utf-8')
+    for x in range(2900):
+        line=f.read(100)
+        aline=jieba.cut(line,cut_all=False)
+        newline=" ".join(aline)
+        print newline
+        file.write(newline)
+
