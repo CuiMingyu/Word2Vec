@@ -2,6 +2,7 @@
 
 import jieba
 import codecs
+jieba.load_userdict("list.txt")
 import sys
 reload(sys)
 sys.setdefaultencoding( "utf-8" )
